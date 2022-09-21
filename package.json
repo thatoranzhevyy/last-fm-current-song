@@ -1,0 +1,21 @@
+{
+  "name": "last-fm-current-song",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [
+    "last.fm",
+    "bot",
+    "twitch"
+  ],
+  "author": "Bogenbai Baizharassov",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "request": "^2.88.2",
+    "tmi.js": "^1.8.5"
+  }
+}
