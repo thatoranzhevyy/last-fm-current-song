@@ -1,6 +1,5 @@
 require('dotenv').config();
 var request = require("request"),
-  commander = require("commander"),
   tmi = require('tmi.js'),
   currentTrack;
 
@@ -78,16 +77,14 @@ function checkIfTrackIsPlayingAndNew(track) {
 
     if (currentTrack != trackName) {
       // console.log(trackName);
-      if (!commander.quiet) {
-        sendMessageToTwitch(trackName);
-      }
+      sendMessageToTwitch(trackName);
       currentTrack = trackName;
     }
   }
 }
 
 function sendMessageToTwitch(message) {
-  console.log(new Date().toLocaleString() +": "+message)
+  console.log(new Date().toLocaleString() + ": " + message)
   client.say(`#${process.env.CHANNEL_NAME}`, `Сейчас играет: ${message}`);
 }
 
